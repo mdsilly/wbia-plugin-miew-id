@@ -157,7 +157,7 @@ class Trainer:
         else:
             margins = None
 
-        model = MiewIdNet(**dict(config.model_params), margins=margins)
+        model = MiewIdNet(**dict(config.model_params))
         model.to(device)
 
         loss_fn = fetch_loss()
