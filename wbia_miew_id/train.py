@@ -46,7 +46,7 @@ class Trainer:
                 print('Group average score: ', valid_score)
             else:
                 print('Evaluating on full test set')
-                valid_score = eval_fn(valid_loader, model, device, use_wandb=use_wandb)
+                valid_score, valid_cmc = eval_fn(valid_loader, model, device, use_wandb=use_wandb)
                 print('Valid score: ', valid_score)
 
             if valid_score > best_score:
