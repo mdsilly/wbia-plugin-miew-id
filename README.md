@@ -208,4 +208,17 @@ A config file path can be set by:
   - `fliplr`: Whether to perform horizontal flipping during testing
   - `fliplr_view`: List of viewpoints to apply horizontal flipping
   - `batch_size`: Batch size for plugin inference
-  
+
+## Citation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13647526.svg)](https://doi.org/10.5281/zenodo.13647526)
+```bibtex
+@misc{WildMe2023,
+  author = {Otarashvili, Lasha},
+  title = {MiewID},
+  year = {2023},
+  url = {https://github.com/WildMeOrg/wbia-plugin-miew-id},
+  doi = {10.5281/zenodo.13647526},
+}
+```
+
+
