@@ -75,7 +75,7 @@ class Evaluator:
         
         if checkpoint_path:
             weights = torch.load(checkpoint_path, map_location=device)
-            n_train_classes = weights[list(weights.keys())[-1]].shape[-1]
+            n_train_classes = 0
             if model_params['n_classes'] != n_train_classes:
                 print(f"WARNING: Overriding n_classes in config ({model_params['n_classes']}) which is different from actual n_train_classes in the checkpoint -  ({n_train_classes}).")
                 model_params['n_classes'] = n_train_classes
