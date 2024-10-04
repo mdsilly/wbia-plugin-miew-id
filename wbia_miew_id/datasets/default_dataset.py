@@ -25,6 +25,7 @@ class MiewIdDataset(Dataset):
         row = self.csv.iloc[index]
 
         image_path = row['file_path']
+        print(image_path)
         image = load_image(image_path)
 
         bbox = row['bbox']
