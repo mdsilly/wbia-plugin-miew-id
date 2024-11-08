@@ -26,7 +26,12 @@ class MiewIdDataset(Dataset):
 
         image_path = row['file_path']
         print(image_path)
-        image = load_image(image_path)
+        try:
+            print("Entering debug mode")
+            image = load_image(image_path)
+        except Exception as e:  # Handle image loading errors
+            print(f"Error loading image {image_path}: {e}")
+            return self.__getitem__((index + 1) % len(self))  # Recursive call to move to next image
 
         bbox = row['bbox']
         theta = row['theta'] if row['theta'] is not None else 0
